@@ -76,7 +76,7 @@ while True:
         pi = 4 * in_circle_count / in_square_count
         print("circle = " + str(in_circle_count) + " square = " + str(in_square_count))
         print("pi = " + str(pi))
-        print(math.pi)
+        #print(math.pi)
     except ZeroDivisionError:
         print("circle = " + str(in_circle_count) + " square = " + str(in_square_count))
         print("pi = " + "infinity")
