@@ -1,10 +1,8 @@
+import sys
 import random
 import math
 
-un = 0
-ra = 0
 def main():
-    print("HI")
     inside_square = 0
     inside_circle = 0
 
@@ -32,9 +30,13 @@ def main():
         _pi = _inside_circle / _inside_square * 4
         _diff = abs(_pi - math.pi)
         ra += _diff
+    return (un, ra)
 
-        print(f"pi with unifor = {pi}\tdiff = {diff}\npi with random = {_pi}\tdiff = {_diff}\n\n")
-        print(f"uniform = {un}\nrandom = {ra}\n")
 
 if __name__ == "__main__":
-    main()
+    print("uniform, random")
+    for _ in range(1000):
+        un, ra = main()
+        print(f"{un},{ra}")
+        print(f"{_}", file=sys.stderr)
+
